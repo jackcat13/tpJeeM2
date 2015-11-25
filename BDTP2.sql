@@ -9,7 +9,7 @@ drop table if exists ENTREE;
 /*==============================================================*/
 create table AGENCE
 (
-   ID                   int
+   IDAGENCE             bigint
 );
 
 /*==============================================================*/
@@ -17,7 +17,7 @@ create table AGENCE
 /*==============================================================*/
 create table BACKLOG
 (
-   ID                   int,
+   IDBACKLOG            bigint,
    NOM                  varchar(1024),
    DATE_DE_CREATION     date,
    PRIORITE             int,
@@ -31,20 +31,11 @@ create table BACKLOG
 /*==============================================================*/
 create table ENTREE
 (
-   ID                   int,
+   IDENTREE             bigint,
    COMMENTAIRE          text
 );
 
-alter table AGENCE add constraint FK_GERE foreign key ()
-      references BACKLOG on delete restrict on update restrict;
-
-alter table AGENCE add constraint FK_GERE2 foreign key ()
-      references BACKLOG on delete restrict on update restrict;
-
-alter table BACKLOG add constraint FK_GERE3 foreign key ()
-      references AGENCE on delete restrict on update restrict;
-
-alter table BACKLOG add constraint FK_GERE4 foreign key ()
+alter table BACKLOG add constraint FK_GERE foreign key ()
       references AGENCE on delete restrict on update restrict;
 
 alter table ENTREE add constraint FK_POSSEDE foreign key ()
