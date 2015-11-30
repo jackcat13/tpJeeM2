@@ -10,9 +10,7 @@
 			<groupId>jaxws-serveurGestionColis</groupId>
 			<artifactId>jaxws-serveurGestionColis</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
-			<type>ejb</type>
 		</dependency>
-
 	</dependencies>
 
 	<build>

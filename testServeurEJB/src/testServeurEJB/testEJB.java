@@ -1,6 +1,5 @@
 package testServeurEJB;
 
-import java.util.Hashtable;
 import java.util.Properties;
 
 import javax.naming.Context;
@@ -20,7 +19,7 @@ public class testEJB {
 		try {
 			Context context = new InitialContext(prop);
 			SuiviColis beanRemote = (SuiviColis) context
-					.lookup("java:global/jaxws-serveurGestionColis/SuiviColisBean");
+					.lookup("SuiviColis");
 			System.out.println(beanRemote.coucou("baltringue"));
 			context.close();
 		} catch (NamingException e) {

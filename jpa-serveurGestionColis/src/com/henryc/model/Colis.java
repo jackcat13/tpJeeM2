@@ -5,16 +5,16 @@ import javax.persistence.*;
 
 
 /**
- * The persistent class for the Colis database table.
+ * The persistent class for the COLIS database table.
  * 
  */
 @Entity
+@Table(name="COLIS")
 @NamedQuery(name="Colis.findAll", query="SELECT c FROM Colis c")
 public class Colis implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idColis;
 
 	private String destinationColis;
@@ -106,14 +106,6 @@ public class Colis implements Serializable {
 
 	public void setValeurColis(double valeurColis) {
 		this.valeurColis = valeurColis;
-	}
-
-	@Override
-	public String toString() {
-		return "Colis [idColis=" + idColis + ", destinationColis=" + destinationColis + ", emplacementColis="
-				+ emplacementColis + ", etatColis=" + etatColis + ", latitudeColis=" + latitudeColis
-				+ ", longitudeColis=" + longitudeColis + ", origineColis=" + origineColis + ", poidsColis=" + poidsColis
-				+ ", valeurColis=" + valeurColis + "]";
 	}
 
 }

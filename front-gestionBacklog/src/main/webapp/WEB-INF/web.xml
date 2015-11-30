@@ -14,4 +14,4 @@
 		<param-name>javax.faces.DEFAULT_SUFFIX</param-name>
 		<param-value>.xhtml</param-value>
 	</context-param>
-</web-app> 
+</web-app>

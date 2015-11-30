@@ -2,16 +2,29 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml"
-xmlns:ui="http://java.sun.com/jsf/facelets"
-xmlns:f="http://java.sun.com/jsf/core"
-xmlns:h="http://java.sun.com/jsf/html">
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
 <h:head>
-<title>Test JSF Page</title>
-</h:head>v <h:body>
-<h:form name="monForm">
-<h1>Page de test</h1>
-<h:outputText value="Test outputText" />
+	<title>Test JSF Page</title>
+</h:head>
+<h:body>
 
-</h:form>
+	<div id="content">
+		<h1>Gestion backlog - Index</h1>
+		<h:form name="monForm">
+			<h:dataTable value="#{agenceBean.agencesList}" var="agence"
+				class="table-responsive table-striped table-bordered">
+				<h:column>
+					<h:outputText value="#{agence}" />
+				</h:column>
+				<h:column>
+					<h:commandButton value="delete" />
+				</h:column>
+			</h:dataTable>
+			<h:commandButton value="Ajouter" />
+		</h:form>
+	</div>
+
 </h:body>
-</html> 
+</html>
