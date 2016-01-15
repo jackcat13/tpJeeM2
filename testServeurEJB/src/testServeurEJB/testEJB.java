@@ -6,8 +6,6 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
-import com.henryc.jaxws.SuiviColis;
-
 public class testEJB {
 
 	public static void main(String[] args) {
@@ -18,14 +16,14 @@ public class testEJB {
 
 		try {
 			Context context = new InitialContext(prop);
-			SuiviColis beanRemote = (SuiviColis) context
+			SuiviColisRemote beanRemote = (SuiviColisRemote) context
 					.lookup("SuiviColis");
-			System.out.println(beanRemote.coucou("baltringue"));
+			//Colis colis = new Colis(3, "testmodif", "test", "test", 15, 15, "test", 15, 15);
+			//beanRemote.persist(colis);
+			beanRemote.coucou();
 			context.close();
 		} catch (NamingException e) {
 			e.printStackTrace();
 		}
-
-		
 	}
 }

@@ -1,4 +1,4 @@
-package com.henryc.model;
+package model;
 
 import java.io.Serializable;
 import javax.persistence.*;
@@ -15,6 +15,7 @@ public class Colis implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idColis;
 
 	private String destinationColis;
@@ -33,7 +34,7 @@ public class Colis implements Serializable {
 
 	private double valeurColis;
 
-	public Colis() {
+	public Coli() {
 	}
 
 	public int getIdColis() {

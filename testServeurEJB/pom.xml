@@ -5,14 +5,6 @@
 	<artifactId>testServeurEJB</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-	<dependencies>
-		<dependency>
-			<groupId>jaxws-serveurGestionColis</groupId>
-			<artifactId>jaxws-serveurGestionColis</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-	</dependencies>
-
 	<build>
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>
